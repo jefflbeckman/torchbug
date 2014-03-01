@@ -8491,7 +8491,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="3V3_PWR9" library="supply" deviceset="3V3" device=""/>
 <part name="3V3_PWR10" library="supply" deviceset="3V3" device=""/>
 <part name="3V3_PWR11" library="supply" deviceset="3V3" device=""/>
-<part name="R4" library="discrete" deviceset="R" device="R603" value="56K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="3V3_PWR1" library="supply" deviceset="3V3" device=""/>
@@ -8561,15 +8560,16 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
 <part name="D3" library="SparkFun-LED" deviceset="LED-RGB-CC-THRU" device="CLEAR"/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
-<part name="R7" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R8" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R10" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R11" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R12" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R13" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R14" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
-<part name="R15" library="rcl" deviceset="R-US_" device="R0402" value="50"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R8" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R11" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R12" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R13" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R14" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R15" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0402" value="56k"/>
 </parts>
 <sheets>
 <sheet>
@@ -8607,7 +8607,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="3V3_PWR9" gate="A" x="167.64" y="106.68" rot="R270"/>
 <instance part="3V3_PWR10" gate="A" x="167.64" y="109.22" rot="R270"/>
 <instance part="3V3_PWR11" gate="A" x="167.64" y="111.76" rot="R270"/>
-<instance part="R4" gate="G$1" x="180.34" y="114.3"/>
 <instance part="GND6" gate="1" x="185.42" y="116.84" rot="R180"/>
 <instance part="GND5" gate="1" x="152.4" y="66.04" rot="R180"/>
 <instance part="3V3_PWR1" gate="A" x="93.98" y="106.68" rot="R90"/>
@@ -8702,6 +8701,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="R13" gate="G$1" x="81.28" y="99.06" rot="MR180"/>
 <instance part="R14" gate="G$1" x="88.9" y="96.52" rot="MR180"/>
 <instance part="R15" gate="G$1" x="81.28" y="93.98" rot="MR180"/>
+<instance part="R4" gate="G$1" x="180.34" y="114.3" rot="MR180"/>
 </instances>
 <busses>
 </busses>
@@ -8728,10 +8728,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <segment>
 <pinref part="C4" gate="C" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="AGND"/>
@@ -8943,6 +8939,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="D3" gate="G$1" pin="CATHODE"/>
 <pinref part="GND38" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -9101,8 +9101,8 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <net name="N$5" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="R_BIAS"/>
-<pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="114.3" x2="165.1" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="DCOUPL" class="0">
