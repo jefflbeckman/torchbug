@@ -1689,6 +1689,36 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </package>
 </packages>
 </library>
+<library name="holes">
+<description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="4,1-PAD-SQUARE">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.1 mm, square</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<wire x1="-5.588" y1="5.588" x2="5.588" y2="5.588" width="2" layer="40"/>
+<wire x1="5.588" y1="5.588" x2="5.588" y2="-5.588" width="2" layer="40"/>
+<wire x1="5.588" y1="-5.588" x2="-5.588" y2="-5.588" width="2" layer="40"/>
+<wire x1="-5.588" y1="-5.588" x2="-5.588" y2="5.588" width="2" layer="40"/>
+<wire x1="-5.588" y1="5.588" x2="5.588" y2="5.588" width="2" layer="39"/>
+<wire x1="5.588" y1="5.588" x2="5.588" y2="-5.588" width="2" layer="39"/>
+<wire x1="5.588" y1="-5.588" x2="-5.588" y2="-5.588" width="2" layer="39"/>
+<wire x1="-5.588" y1="-5.588" x2="-5.588" y2="5.588" width="2" layer="39"/>
+<wire x1="-5.588" y1="5.588" x2="5.588" y2="5.588" width="2" layer="43"/>
+<wire x1="5.588" y1="5.588" x2="5.588" y2="-5.588" width="2" layer="43"/>
+<wire x1="5.588" y1="-5.588" x2="-5.588" y2="-5.588" width="2" layer="43"/>
+<wire x1="-5.588" y1="-5.588" x2="-5.588" y2="5.588" width="2" layer="43"/>
+<wire x1="-4.826" y1="4.826" x2="4.826" y2="4.826" width="0.2032" layer="21"/>
+<wire x1="4.826" y1="4.826" x2="4.826" y2="-4.826" width="0.2032" layer="21"/>
+<wire x1="4.826" y1="-4.826" x2="-4.826" y2="-4.826" width="0.2032" layer="21"/>
+<wire x1="-4.826" y1="-4.826" x2="-4.826" y2="4.826" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="2.15" width="0.2032" layer="21"/>
+<pad name="B4,1" x="0" y="0" drill="4.1" diameter="9" shape="square"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1947,6 +1977,8 @@ design rules under a new name.</description>
 <attribute name="NAME" x="1.238" y="29.365" size="1.27" layer="25" rot="R90"/>
 </element>
 <element name="C14" library="discrete" package="C0402" value="0u1" x="32.5" y="12" rot="R90"/>
+<element name="H1" library="holes" package="4,1-PAD-SQUARE" value="MOUNT-PAD-SQUARE4.1" x="6" y="-7.5"/>
+<element name="H2" library="holes" package="4,1-PAD-SQUARE" value="MOUNT-PAD-SQUARE4.1" x="6" y="-21"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2013,6 +2045,7 @@ design rules under a new name.</description>
 <vertex x="-0.5" y="-0.5"/>
 <vertex x="-0.5" y="40.5"/>
 </polygon>
+<contactref element="H2" pad="B4,1"/>
 <wire x1="40.9" y1="19.5" x2="42.94" y2="15.69" width="0" layer="19" extent="1-1"/>
 <wire x1="24.275" y1="11.75" x2="26.5" y2="12.15" width="0" layer="19" extent="1-1"/>
 <wire x1="23.75" y1="12.275" x2="24.275" y2="11.75" width="0" layer="19" extent="1-1"/>
@@ -2023,6 +2056,7 @@ design rules under a new name.</description>
 <wire x1="15" y1="19.75" x2="15" y2="22.25" width="0" layer="19" extent="1-1"/>
 <wire x1="18.25" y1="25.5" x2="15" y2="24.75" width="0" layer="19" extent="1-1"/>
 <wire x1="19" y1="21.5" x2="19.25" y2="17.5" width="0" layer="19" extent="1-1"/>
+<wire x1="6" y1="-21" x2="14.65" y2="2.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3">
 <contactref element="U1" pad="10"/>
@@ -2249,9 +2283,11 @@ design rules under a new name.</description>
 <contactref element="VREG1" pad="1"/>
 <contactref element="C13" pad="2"/>
 <contactref element="C1" pad="1"/>
+<contactref element="H1" pad="B4,1"/>
 <wire x1="9.15" y1="10" x2="6.05" y2="15.3001" width="0" layer="19" extent="1-1"/>
 <wire x1="2.85" y1="10" x2="6.05" y2="15.3001" width="0" layer="19" extent="1-1"/>
 <wire x1="9.15" y1="2.7" x2="9.15" y2="10" width="0" layer="19" extent="1-1"/>
+<wire x1="6" y1="-7.5" x2="9.15" y2="2.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$18">
 <contactref element="D1" pad="4"/>
