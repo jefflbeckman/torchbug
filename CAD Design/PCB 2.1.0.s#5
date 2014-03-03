@@ -8402,6 +8402,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C93" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="C94" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="VREG1" library="voltage-regulators" deviceset="LM3940" device="IMP"/>
+<part name="C5" library="discrete" deviceset="C" device="C0603" value="1n"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="X2" library="crystal" deviceset="FC-12M" device=""/>
 <part name="C6" library="discrete" deviceset="C" device="C0603" value="47p"/>
@@ -8465,7 +8466,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C3" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="C13" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="C1" library="discrete" deviceset="C" device="C0402" value="0u1"/>
-<part name="C5" library="discrete" deviceset="C" device="C0402" value="1n"/>
 </parts>
 <sheets>
 <sheet>
@@ -8532,6 +8532,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="C93" gate="C" x="30.48" y="160.02"/>
 <instance part="C94" gate="C" x="38.1" y="160.02"/>
 <instance part="VREG1" gate="A" x="76.2" y="142.24"/>
+<instance part="C5" gate="C" x="152.4" y="53.34" rot="R270"/>
 <instance part="GND9" gate="1" x="157.48" y="53.34" rot="R90"/>
 <instance part="X2" gate="G$1" x="205.74" y="154.94"/>
 <instance part="C6" gate="C" x="200.66" y="149.86" rot="R180"/>
@@ -8601,7 +8602,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="C3" gate="C" x="96.52" y="142.24" rot="R180"/>
 <instance part="C13" gate="C" x="53.34" y="129.54" rot="R180"/>
 <instance part="C1" gate="C" x="60.96" y="147.32" rot="R270"/>
-<instance part="C5" gate="C" x="152.4" y="53.34" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8733,6 +8733,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="GND19" gate="1" pin="GND"/>
 </segment>
 <segment>
+<pinref part="C5" gate="C" pin="1"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
 <pinref part="U1" gate="G$1" pin="DGND_USB"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
@@ -8838,10 +8842,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <segment>
 <pinref part="GND26" gate="1" pin="GND"/>
 <pinref part="C1" gate="C" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<pinref part="C5" gate="C" pin="1"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -9145,6 +9145,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <net name="!RST_PIN" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="RESET_N"/>
+<pinref part="C5" gate="C" pin="2"/>
 <wire x1="147.32" y1="63.5" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="RESET" gate="S" pin="4"/>
 <pinref part="RESET" gate="S" pin="3"/>
@@ -9156,7 +9157,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <junction x="165.1" y="55.88"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <junction x="147.32" y="60.96"/>
-<pinref part="C5" gate="C" pin="2"/>
 </segment>
 </net>
 <net name="VDDIO" class="0">

@@ -8361,8 +8361,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="FB1" library="discrete" deviceset="L" device="0603"/>
 <part name="3V3_PWR4" library="supply" deviceset="3V3" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
+<part name="C1" library="discrete" deviceset="C" device="C1206" value="0u1"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="LED2" library="discrete" deviceset="LED" device="805"/>
+<part name="C3" library="discrete" deviceset="C" device="C1206" value="0u1"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="U1" library="ic" deviceset="CC2538" device=""/>
 <part name="C2" library="discrete" deviceset="C" device="C0603" value="47p"/>
@@ -8402,6 +8404,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C93" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="C94" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="VREG1" library="voltage-regulators" deviceset="LM3940" device="IMP"/>
+<part name="C5" library="discrete" deviceset="C" device="C0603" value="1n"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="X2" library="crystal" deviceset="FC-12M" device=""/>
 <part name="C6" library="discrete" deviceset="C" device="C0603" value="47p"/>
@@ -8432,6 +8435,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="U2" library="SparkFun-PowerIC" deviceset="MAX1555" device=""/>
 <part name="C12" library="discrete" deviceset="C" device="C0603" value="47p"/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
+<part name="C13" library="discrete" deviceset="C" device="C1206" value="0u1"/>
 <part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="RESET" library="SparkFun-Electromechanical" deviceset="TAC_SWITCH" device="SMD"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
@@ -8462,10 +8466,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
 <part name="R3" library="rcl" deviceset="R-US_" device="R0402" value="33"/>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0402" value="2k2"/>
-<part name="C3" library="discrete" deviceset="C" device="C0402" value="0u1"/>
-<part name="C13" library="discrete" deviceset="C" device="C0402" value="0u1"/>
-<part name="C1" library="discrete" deviceset="C" device="C0402" value="0u1"/>
-<part name="C5" library="discrete" deviceset="C" device="C0402" value="1n"/>
 </parts>
 <sheets>
 <sheet>
@@ -8481,8 +8481,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="FB1" gate="L" x="91.44" y="147.32"/>
 <instance part="3V3_PWR4" gate="A" x="96.52" y="152.4"/>
 <instance part="GND17" gate="1" x="76.2" y="139.7"/>
+<instance part="C1" gate="C" x="58.42" y="147.32" rot="R90"/>
 <instance part="GND18" gate="1" x="167.64" y="132.08"/>
 <instance part="LED2" gate="LED" x="50.8" y="91.44"/>
+<instance part="C3" gate="C" x="96.52" y="142.24" rot="R180"/>
 <instance part="GND4" gate="1" x="96.52" y="137.16"/>
 <instance part="U1" gate="G$1" x="129.54" y="99.06"/>
 <instance part="C2" gate="C" x="38.1" y="104.14" rot="R180"/>
@@ -8532,6 +8534,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="C93" gate="C" x="30.48" y="160.02"/>
 <instance part="C94" gate="C" x="38.1" y="160.02"/>
 <instance part="VREG1" gate="A" x="76.2" y="142.24"/>
+<instance part="C5" gate="C" x="152.4" y="53.34" rot="R270"/>
 <instance part="GND9" gate="1" x="157.48" y="53.34" rot="R90"/>
 <instance part="X2" gate="G$1" x="205.74" y="154.94"/>
 <instance part="C6" gate="C" x="200.66" y="149.86" rot="R180"/>
@@ -8568,6 +8571,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="U2" gate="G$1" x="35.56" y="137.16"/>
 <instance part="C12" gate="C" x="10.16" y="134.62"/>
 <instance part="GND36" gate="1" x="10.16" y="124.46"/>
+<instance part="C13" gate="C" x="53.34" y="129.54" rot="R180"/>
 <instance part="GND37" gate="1" x="53.34" y="124.46"/>
 <instance part="RESET" gate="S" x="170.18" y="55.88" rot="R180"/>
 <instance part="GND22" gate="1" x="177.8" y="53.34"/>
@@ -8598,10 +8602,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="R2" gate="G$1" x="60.96" y="111.76" rot="MR180"/>
 <instance part="R3" gate="G$1" x="53.34" y="109.22" rot="MR180"/>
 <instance part="R5" gate="G$1" x="152.4" y="60.96" rot="MR180"/>
-<instance part="C3" gate="C" x="96.52" y="142.24" rot="R180"/>
-<instance part="C13" gate="C" x="53.34" y="129.54" rot="R180"/>
-<instance part="C1" gate="C" x="60.96" y="147.32" rot="R270"/>
-<instance part="C5" gate="C" x="152.4" y="53.34" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8615,6 +8615,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="167.64" y1="137.16" x2="167.64" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="JTAG" gate="-GND" pin="S"/>
+</segment>
+<segment>
+<pinref part="C3" gate="C" pin="1"/>
+<pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C2" gate="C" pin="1"/>
@@ -8692,6 +8696,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="GND25" gate="1" pin="GND"/>
 </segment>
 <segment>
+<pinref part="C1" gate="C" pin="1"/>
+<pinref part="GND26" gate="1" pin="GND"/>
+</segment>
+<segment>
 <pinref part="B1" gate="G$1" pin="5"/>
 <wire x1="220.98" y1="116.84" x2="213.36" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="116.84" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
@@ -8731,6 +8739,10 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <wire x1="190.5" y1="60.96" x2="190.5" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="66.04" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C5" gate="C" pin="1"/>
+<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="DGND_USB"/>
@@ -8774,11 +8786,11 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <junction x="10.16" y="127"/>
 </segment>
 <segment>
+<pinref part="C13" gate="C" pin="1"/>
 <pinref part="GND37" gate="1" pin="GND"/>
 <pinref part="U2" gate="G$1" pin="DC"/>
 <wire x1="48.26" y1="134.62" x2="48.26" y2="127" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
-<pinref part="C13" gate="C" pin="1"/>
 <junction x="53.34" y="127"/>
 </segment>
 <segment>
@@ -8830,18 +8842,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="GND39" gate="1" pin="GND"/>
 <junction x="99.06" y="55.88"/>
 <pinref part="GND39" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="C3" gate="C" pin="1"/>
-</segment>
-<segment>
-<pinref part="GND26" gate="1" pin="GND"/>
-<pinref part="C1" gate="C" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<pinref part="C5" gate="C" pin="1"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -8915,9 +8915,9 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 </segment>
 <segment>
 <pinref part="FB1" gate="L" pin="P$2"/>
+<pinref part="C3" gate="C" pin="2"/>
 <pinref part="3V3_PWR4" gate="A" pin="3V3"/>
 <wire x1="96.52" y1="149.86" x2="96.52" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="C3" gate="C" pin="2"/>
 <junction x="96.52" y="147.32"/>
 </segment>
 <segment>
@@ -9145,6 +9145,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <net name="!RST_PIN" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="RESET_N"/>
+<pinref part="C5" gate="C" pin="2"/>
 <wire x1="147.32" y1="63.5" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="RESET" gate="S" pin="4"/>
 <pinref part="RESET" gate="S" pin="3"/>
@@ -9156,7 +9157,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <junction x="165.1" y="55.88"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <junction x="147.32" y="60.96"/>
-<pinref part="C5" gate="C" pin="2"/>
 </segment>
 </net>
 <net name="VDDIO" class="0">
@@ -9250,6 +9250,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <net name="N$14" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="BATT"/>
+<pinref part="C1" gate="C" pin="2"/>
 <pinref part="VREG1" gate="A" pin="IN"/>
 <wire x1="68.58" y1="147.32" x2="63.5" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="139.7" x2="53.34" y2="139.7" width="0.1524" layer="91"/>
@@ -9257,11 +9258,12 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <wire x1="68.58" y1="139.7" x2="68.58" y2="147.32" width="0.1524" layer="91"/>
 <junction x="68.58" y="147.32"/>
 <wire x1="53.34" y1="139.7" x2="53.34" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="C13" gate="C" pin="2"/>
 <junction x="53.34" y="139.7"/>
 <junction x="68.58" y="139.7"/>
-<wire x1="68.58" y1="139.7" x2="68.58" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="C13" gate="C" pin="2"/>
-<pinref part="C1" gate="C" pin="1"/>
+<wire x1="68.58" y1="134.62" x2="68.58" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="137.16" x2="68.58" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="134.62" x2="68.58" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
