@@ -8855,6 +8855,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="H1" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
 <part name="H2" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
+<part name="GND34" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8897,12 +8898,12 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="B1" gate="G$1" x="200.66" y="106.68" rot="R180"/>
 <instance part="GND12" gate="1" x="193.04" y="104.14"/>
 <instance part="GND13" gate="1" x="210.82" y="106.68"/>
-<instance part="X1" gate="G$1" x="195.58" y="93.98"/>
-<instance part="GND14" gate="1" x="200.66" y="88.9" rot="R90"/>
-<instance part="C7" gate="C" x="190.5" y="88.9" rot="R180"/>
-<instance part="C8" gate="C" x="210.82" y="93.98" rot="R270"/>
-<instance part="GND15" gate="1" x="215.9" y="93.98" rot="R90"/>
-<instance part="GND16" gate="1" x="193.04" y="86.36" rot="R90"/>
+<instance part="X1" gate="G$1" x="238.76" y="93.98"/>
+<instance part="GND14" gate="1" x="243.84" y="88.9" rot="R90"/>
+<instance part="C7" gate="C" x="233.68" y="88.9" rot="R180"/>
+<instance part="C8" gate="C" x="254" y="93.98" rot="R270"/>
+<instance part="GND15" gate="1" x="259.08" y="93.98" rot="R90"/>
+<instance part="GND16" gate="1" x="236.22" y="86.36" rot="R90"/>
 <instance part="JTAG" gate="-VDD_IO" x="170.18" y="139.7" smashed="yes">
 <attribute name="NAME" x="172.72" y="138.938" size="1.524" layer="95"/>
 <attribute name="VALUE" x="171.958" y="130.937" size="1.778" layer="96"/>
@@ -8986,6 +8987,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="GND10" gate="1" x="83.82" y="134.62" rot="R180"/>
 <instance part="H1" gate="G$1" x="68.58" y="129.54" rot="R270"/>
 <instance part="H2" gate="G$1" x="83.82" y="129.54" rot="R270"/>
+<instance part="GND34" gate="1" x="220.98" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -9103,13 +9105,9 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="GND32" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD4"/>
-<wire x1="165.1" y1="83.82" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="83.82" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PD3"/>
 <wire x1="167.64" y1="81.28" x2="167.64" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="81.28" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
-<junction x="167.64" y="81.28"/>
 <pinref part="GND33" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -9210,6 +9208,14 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
 <pinref part="H2" gate="G$1" pin="MOUNT"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="220.98" y1="101.6" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND@1"/>
+<junction x="220.98" y="106.68"/>
+<wire x1="220.98" y1="106.68" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="GND34" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -9436,35 +9442,24 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <wire x1="190.5" y1="101.6" x2="195.58" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RF" class="0">
-<segment>
-<pinref part="B1" gate="G$1" pin="1"/>
-<wire x1="220.98" y1="101.6" x2="208.28" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="220.98" y1="101.6" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND@1"/>
-<junction x="220.98" y="106.68"/>
-<wire x1="220.98" y1="106.68" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$30" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="XOSC32M_Q2"/>
-<wire x1="165.1" y1="96.52" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="96.52" x2="205.74" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="96.52" x2="248.92" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="96.52" x2="248.92" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="X2"/>
 <pinref part="C8" gate="C" pin="2"/>
-<junction x="205.74" y="93.98"/>
-<wire x1="205.74" y1="93.98" x2="203.2" y2="93.98" width="0.1524" layer="91"/>
+<junction x="248.92" y="93.98"/>
+<wire x1="248.92" y1="93.98" x2="246.38" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="X1"/>
 <pinref part="U1" gate="G$1" pin="XOSC32M_Q1"/>
-<wire x1="190.5" y1="93.98" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="93.98" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="C7" gate="C" pin="2"/>
-<junction x="190.5" y="93.98"/>
+<junction x="233.68" y="93.98"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -9505,21 +9500,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="R5" gate="G$1" pin="1"/>
 <junction x="147.32" y="60.96"/>
 <pinref part="C5" gate="C" pin="2"/>
-</segment>
-</net>
-<net name="VDDIO" class="0">
-<segment>
-<wire x1="251.46" y1="68.58" x2="248.92" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="68.58" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="VDDIO"/>
-</segment>
-</net>
-<net name="VDD" class="0">
-<segment>
-<wire x1="248.92" y1="55.88" x2="241.3" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9574,11 +9554,9 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <net name="N$13" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CSB"/>
-<wire x1="226.06" y1="76.2" x2="226.06" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="83.82" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="76.2" x2="226.06" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="86.36" x2="165.1" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PD5"/>
-<wire x1="170.18" y1="86.36" x2="165.1" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -9767,6 +9745,23 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="U1" gate="G$1" pin="PC1"/>
 <wire x1="68.58" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$45" class="0">
+<segment>
+<wire x1="248.92" y1="55.88" x2="241.3" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="VDD"/>
+<wire x1="251.46" y1="68.58" x2="248.92" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="68.58" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="VDDIO"/>
+<wire x1="241.3" y1="55.88" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="60.96" x2="241.3" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PD4"/>
+<wire x1="241.3" y1="83.82" x2="165.1" y2="83.82" width="0.1524" layer="91"/>
+<junction x="241.3" y="60.96"/>
+<junction x="241.3" y="55.88"/>
 </segment>
 </net>
 </nets>

@@ -8852,9 +8852,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C1" library="discrete" deviceset="C" device="C0402" value="0u1"/>
 <part name="C5" library="discrete" deviceset="C" device="C0402" value="1n"/>
 <part name="C14" library="discrete" deviceset="C" device="C0402" value="0u1"/>
-<part name="H1" library="holes" deviceset="MOUNT-PAD-SQUARE" device="4.1"/>
-<part name="H2" library="holes" deviceset="MOUNT-PAD-SQUARE" device="4.1"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="H1" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
+<part name="H2" library="holes" deviceset="MOUNT-PAD-SQUARE" device="2.8"/>
 </parts>
 <sheets>
 <sheet>
@@ -8983,9 +8983,9 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <instance part="C1" gate="C" x="60.96" y="147.32" rot="R270"/>
 <instance part="C5" gate="C" x="152.4" y="53.34" rot="R270"/>
 <instance part="C14" gate="C" x="86.36" y="53.34" rot="R90"/>
+<instance part="GND10" gate="1" x="83.82" y="134.62" rot="R180"/>
 <instance part="H1" gate="G$1" x="68.58" y="129.54" rot="R270"/>
 <instance part="H2" gate="G$1" x="83.82" y="129.54" rot="R270"/>
-<instance part="GND10" gate="1" x="83.82" y="134.62" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -9208,8 +9208,8 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <pinref part="C5" gate="C" pin="1"/>
 </segment>
 <segment>
-<pinref part="H2" gate="G$1" pin="MOUNT"/>
 <pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="H2" gate="G$1" pin="MOUNT"/>
 </segment>
 </net>
 <net name="3V3" class="0">
