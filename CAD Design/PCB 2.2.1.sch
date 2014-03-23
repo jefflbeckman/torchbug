@@ -7236,6 +7236,32 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <junction x="25.4" y="58.42"/>
 <pinref part="GND40" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND@10"/>
+<wire x1="58.42" y1="68.58" x2="58.42" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="71.12" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="GND@24"/>
+<wire x1="53.34" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="GND@19"/>
+<wire x1="53.34" y1="68.58" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND41" gate="1" pin="GND"/>
+<junction x="48.26" y="71.12"/>
+<wire x1="48.26" y1="71.12" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
+<junction x="53.34" y="71.12"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<pinref part="U$4" gate="G$1" pin="GND3"/>
+<wire x1="139.7" y1="27.94" x2="139.7" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="GND2"/>
+<junction x="139.7" y="25.4"/>
+<wire x1="139.7" y1="25.4" x2="139.7" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="GND1"/>
+<junction x="139.7" y="22.86"/>
+<wire x1="139.7" y1="22.86" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
+<junction x="139.7" y="20.32"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -7593,21 +7619,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <junction x="88.9" y="78.74"/>
 </segment>
 </net>
-<net name="GND3" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="GND"/>
-<pinref part="GND19" gate="1" pin="GND"/>
-<pinref part="U$4" gate="G$1" pin="GND3"/>
-<wire x1="139.7" y1="27.94" x2="139.7" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="GND2"/>
-<junction x="139.7" y="25.4"/>
-<wire x1="139.7" y1="25.4" x2="139.7" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="GND1"/>
-<junction x="139.7" y="22.86"/>
-<wire x1="139.7" y1="22.86" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
-<junction x="139.7" y="20.32"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="ZOUT"/>
@@ -7799,21 +7810,6 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <wire x1="22.86" y1="53.34" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$32" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="GND@10"/>
-<wire x1="58.42" y1="68.58" x2="58.42" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="71.12" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="GND@24"/>
-<wire x1="53.34" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="GND@19"/>
-<wire x1="53.34" y1="68.58" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="GND41" gate="1" pin="GND"/>
-<junction x="48.26" y="71.12"/>
-<wire x1="48.26" y1="71.12" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
-<junction x="53.34" y="71.12"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
@@ -7821,6 +7817,7 @@ CRYSTAL, 32.768KHZ, FC-12M, 12PF</text>
 <approved hash="101,1,167.64,152.4,JTAG!TRST,S,,,,"/>
 <approved hash="113,1,131.976,90.066,FRAME3,,,,,"/>
 <approved hash="113,1,51.0794,90.17,LED2,,,,,"/>
+<approved hash="115,1,129.54,134.62,ACCSDA,,,,,"/>
 </errors>
 </schematic>
 </drawing>
