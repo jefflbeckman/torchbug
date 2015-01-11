@@ -3891,7 +3891,7 @@ type 0309, grid 2.5 mm</description>
 <part name="RESET" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="VCC" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="GND" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0402" value="10k"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0402" value="1.8k"/>
 </parts>
 <sheets>
 <sheet>

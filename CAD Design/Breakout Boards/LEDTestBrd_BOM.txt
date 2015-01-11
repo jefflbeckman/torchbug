@@ -1,0 +1,17 @@
+Partlist exported from /Users/Ryan/Documents/torchbug/CAD Design/Breakout Boards/LEDTestBrd.sch at 1/11/15 2:43 PM
+
+Part  Value                Device               Package      Description                         PROD_ID  
+D1    LED-RGB-CC-THRUCLEAR LED-RGB-CC-THRUCLEAR LED-RGB-THRU RGB Through-hole common cathode LED DIO-08418
+D2    LED-RGB-CC-THRUCLEAR LED-RGB-CC-THRUCLEAR LED-RGB-THRU RGB Through-hole common cathode LED DIO-08418
+D3    LED-RGB-CC-THRUCLEAR LED-RGB-CC-THRUCLEAR LED-RGB-THRU RGB Through-hole common cathode LED DIO-08418
+DCUP  0u1                  CAP0402-CAP          0402-CAP     Capacitor                                    
+GND                        2,15/1,0             2,15/1,0     THROUGH-HOLE PAD                             
+R1    442                  R-US_R0402           R0402        RESISTOR, American symbol                    
+R2    1.8k                 R-US_R0402           R0402        RESISTOR, American symbol                    
+R3    1.8k                 R-US_R0402           R0402        RESISTOR, American symbol                    
+R4    1.8k                 R-US_R0402           R0402        RESISTOR, American symbol                    
+RESET                      2,15/1,0             2,15/1,0     THROUGH-HOLE PAD                             
+SCL                        2,15/1,0             2,15/1,0     THROUGH-HOLE PAD                             
+SDA                        2,15/1,0             2,15/1,0     THROUGH-HOLE PAD                             
+U$1   TLC59116             TLC59116             TSSOP28                                                   
+VCC                        2,15/1,0             2,15/1,0     THROUGH-HOLE PAD                             
