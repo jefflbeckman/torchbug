@@ -7317,7 +7317,7 @@ by exp-lbrs.ulp</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="GND" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="VCC" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="VCC" device=""/>
@@ -7364,7 +7364,7 @@ by exp-lbrs.ulp</description>
 <part name="C39" library="resistor" deviceset="C-EU" device="C0805" value="1uF"/>
 <part name="C43" library="resistor" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="SUPPLY11" library="supply2" deviceset="VCC" device=""/>
-<part name="GND23" library="supply1" deviceset="GND" device=""/>
+<part name="CPU_GND" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7392,7 +7392,7 @@ by exp-lbrs.ulp</description>
 <instance part="GND8" gate="1" x="226.06" y="66.04"/>
 <instance part="GND9" gate="1" x="243.84" y="66.04"/>
 <instance part="GND10" gate="1" x="256.54" y="93.98"/>
-<instance part="GND11" gate="1" x="241.3" y="91.44" rot="R270"/>
+<instance part="GND" gate="1" x="241.3" y="91.44" rot="R270"/>
 <instance part="SUPPLY1" gate="G$1" x="154.94" y="93.98" rot="R270"/>
 <instance part="SUPPLY2" gate="G$1" x="152.4" y="81.28" rot="R270"/>
 <instance part="SUPPLY3" gate="G$1" x="152.4" y="73.66" rot="R270"/>
@@ -7451,7 +7451,7 @@ by exp-lbrs.ulp</description>
 <instance part="C39" gate="G$1" x="246.38" y="142.24"/>
 <instance part="C43" gate="G$1" x="261.62" y="142.24"/>
 <instance part="SUPPLY11" gate="G$1" x="195.58" y="147.32"/>
-<instance part="GND23" gate="1" x="276.86" y="134.62"/>
+<instance part="CPU_GND" gate="1" x="276.86" y="134.62"/>
 </instances>
 <busses>
 <bus name="I/O[1..40]">
@@ -7480,27 +7480,8 @@ by exp-lbrs.ulp</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="RF_N"/>
-<pinref part="U$4" gate="G$1" pin="5"/>
-<wire x1="256.54" y1="96.52" x2="256.54" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="99.06" x2="256.54" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="101.6" x2="231.14" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="101.6" x2="231.14" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
-<junction x="256.54" y="96.52"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<pinref part="U$4" gate="G$1" pin="6"/>
-<junction x="256.54" y="99.06"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="266.7" y1="93.98" x2="266.7" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND@1"/>
-<wire x1="266.7" y1="93.98" x2="266.7" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="96.52" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
-<junction x="266.7" y="93.98"/>
-</segment>
-<segment>
 <pinref part="U$4" gate="G$1" pin="2"/>
-<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="GND" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="PD7/XOSC32K_Q2"/>
@@ -7576,7 +7557,7 @@ by exp-lbrs.ulp</description>
 <segment>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="200.66" y1="137.16" x2="208.28" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="GND23" gate="1" pin="GND"/>
+<pinref part="CPU_GND" gate="1" pin="GND"/>
 <wire x1="208.28" y1="137.16" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="137.16" x2="223.52" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="137.16" x2="231.14" y2="137.16" width="0.1524" layer="91"/>
@@ -8225,6 +8206,27 @@ by exp-lbrs.ulp</description>
 <wire x1="261.62" y1="99.06" x2="261.62" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="1"/>
 <wire x1="261.62" y1="86.36" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ANT_GND" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="RF_N"/>
+<pinref part="U$4" gate="G$1" pin="5"/>
+<wire x1="256.54" y1="96.52" x2="256.54" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="99.06" x2="256.54" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="101.6" x2="231.14" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="101.6" x2="231.14" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
+<junction x="256.54" y="96.52"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="U$4" gate="G$1" pin="6"/>
+<junction x="256.54" y="99.06"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="266.7" y1="93.98" x2="266.7" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND@1"/>
+<wire x1="266.7" y1="93.98" x2="266.7" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="96.52" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
+<junction x="266.7" y="93.98"/>
 </segment>
 </net>
 </nets>
