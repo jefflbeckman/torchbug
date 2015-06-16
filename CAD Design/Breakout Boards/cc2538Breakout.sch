@@ -7349,7 +7349,7 @@ by exp-lbrs.ulp</description>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="2.2k"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="33"/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0805" value="33"/>
-<part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="56k"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="1.5k"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
@@ -8051,17 +8051,17 @@ by exp-lbrs.ulp</description>
 <wire x1="106.68" y1="162.56" x2="93.98" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="162.56" x2="93.98" y2="180.34" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="PC1"/>
-<wire x1="81.28" y1="66.04" x2="55.88" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="66.04" x2="55.88" y2="180.34" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="I/O33" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="GPIO2"/>
 <wire x1="106.68" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="160.02" x2="91.44" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PC1"/>
+<wire x1="81.28" y1="66.04" x2="55.88" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="66.04" x2="55.88" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I/O35" class="0">
